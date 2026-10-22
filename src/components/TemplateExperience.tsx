@@ -8,7 +8,6 @@ import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Check, ChevronDown, Com
 import { Component, type ErrorInfo, type ReactNode, useEffect, useRef, useState } from "react";
 import { site, type Locale } from "@/content/site";
 import { templateConfigSchema } from "@/content/schema";
-import { StaticCore } from "@/components/scene/StaticCore";
 
 const CoreScene = dynamic(() => import("@/components/scene/CoreScene"), { ssr: false, loading: () => null });
 
@@ -67,7 +66,7 @@ export default function TemplateExperience({ initialLocale = "en" }: { initialLo
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [menuOpen]);
 
-  const sceneFallback = <StaticCore />;
+  const sceneFallback = <div className="core-fallback" role="img" aria-label="Abstract segmented intelligence core" />;
   const allowScene = sceneEnabled && !shouldReduceMotion;
   const heroTitle = rtl ? t.heroTitle : <>Build bold digital<br className="desktop-break" /> products with<br className="desktop-break" /> confidence <span className="hero-italic">&amp; impact.</span></>;
 
@@ -89,7 +88,7 @@ export default function TemplateExperience({ initialLocale = "en" }: { initialLo
         <section className="hero-section" aria-labelledby="hero-title">
           <div className="hero-grain" aria-hidden="true" />
           <div className="hero-copy"><div className="eyebrow hero-eyebrow"><span className="live-dot" />{t.heroEyebrow}</div><h1 id="hero-title" className="hero-title">{heroTitle}</h1><p className="hero-description">{t.heroBody}</p><div className="hero-actions"><a className="button button-primary" href={destinations.quote}>{t.startProject}<ArrowUpRight size={16} /></a><a className="text-link" href="#work">{t.viewWork}<DirectionArrow size={16} /></a></div></div>
-          <div className="hero-art" aria-label={t.orbit}><div className="orbit-label orbit-label-top"><span className="orbit-pip" />{rtl ? "ذكاء متصل" : "CONNECTED INTELLIGENCE"}</div><div className="core-halo" /><div className="core-visual">{sceneFallback}</div><span className="art-index">CORE / 001</span></div>
+          <div className="hero-art" aria-label={t.orbit}><div className="orbit-label orbit-label-top"><span className="orbit-pip" />{rtl ? "ذكاء متصل" : "CONNECTED INTELLIGENCE"}</div><div className="core-halo" /><div className="core-visual"><SceneBoundary fallback={sceneFallback}>{allowScene ? <CoreScene progress={scrollYProgress} reduced={false} /> : sceneFallback}</SceneBoundary></div><span className="art-index">CORE / 001</span></div>
         </section>
 
         <section className="story-section" id="capabilities" ref={storyRef} aria-labelledby="story-title">
