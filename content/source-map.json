@@ -1,0 +1,20 @@
+{
+  "accessed": "2026-10-22",
+  "sources": [
+    { "url": "https://www.begeniustech.sa/", "locale": "en", "field": "hero, positioning, service families, contact, brand logo", "treatment": "condensed", "status": "verified from company website" },
+    { "url": "https://www.begeniustech.sa/ar", "locale": "ar", "field": "Arabic hero, service families, navigation and footer", "treatment": "condensed", "status": "source Arabic copy used; remaining narrative localization requires client review" },
+    { "url": "https://www.begeniustech.sa/services/agentic-ai-solutions", "locale": "en", "field": "AI narrative, delivery process and FAQ", "treatment": "condensed", "status": "verified from company website" },
+    { "url": "https://www.begeniustech.sa/services/secure-enterprise-ai-systems", "locale": "en", "field": "enterprise AI narrative and governance safeguards", "treatment": "condensed", "status": "verified from company website" },
+    { "url": "https://www.begeniustech.sa/trust", "locale": "en", "field": "trust principles", "treatment": "condensed", "status": "verified from company website" },
+    { "url": "https://www.begeniustech.sa/ar/trust", "locale": "ar", "field": "trust section", "treatment": "condensed", "status": "verified Arabic source" },
+    { "url": "https://www.begeniustech.sa/portfolio", "locale": "en", "field": "selected project names, client relationships, source links and media", "treatment": "condensed", "status": "published project details; dates/statistics omitted" },
+    { "url": "https://www.begeniustech.sa/ar/portfolio", "locale": "ar", "field": "selected project names and links", "treatment": "condensed", "status": "published Arabic links and titles" },
+    { "url": "https://epiminds.com/", "locale": "en", "field": "interaction inspiration only", "treatment": "not copied", "status": "3D character module was not available for reliable inspection; this template uses an original abstract core" }
+  ],
+  "contentNotes": [
+    "Numerical proof points, certification badges, and date-sensitive announcements were omitted.",
+    "The source website presents some inconsistent company metrics; no numerical claims are included in this demo.",
+    "One project image is shared by more than one source-site portfolio entry; confirm project/media relationships before final client approval.",
+    "Arabic pages for some service routes expose English content; Arabic labels in those areas need a native-speaker review before production."
+  ]
+}
